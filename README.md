@@ -1,6 +1,6 @@
 # Kampüs Etkinlikleri
 
-Canlı Vercel Adresi: https://isimsoyisim-frontend.vercel.app
+Canlı Vercel Adresi: https://yigit-mercan-frontend.vercel.app/
 
 ## Kurulum
 
