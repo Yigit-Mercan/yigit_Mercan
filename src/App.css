@@ -1,0 +1,181 @@
+:root {
+  --renk-ana: #8c1645;
+  --renk-ana-koyu: #700f35;
+  --renk-hata: #c62828;
+  --bosluk-s: 8px;
+  --kose: 6px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.55;
+}
+
+.app { width: 100%; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* HEADER */
+.site-header { background: var(--renk-ana); color: #fff; padding: 24px 36px 12px; }
+.site-header h1 { font-size: 1.45rem; font-weight: 700; }
+.site-header p { font-size: 0.85rem; color: #f7d6e2; margin-top: 4px; }
+
+/* NAVIGATION (NavLink aria-current="page" ekler) */
+.site-nav {
+  background: var(--renk-ana);
+  padding: 8px 36px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 1px solid var(--renk-ana-koyu);
+}
+.site-nav a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border-radius: var(--kose);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.site-nav a:hover { background: rgba(255, 255, 255, 0.15); }
+.site-nav a[aria-current="page"] {
+  background: #fff;
+  color: var(--renk-ana);
+  font-weight: 700;
+  border-color: #fff;
+}
+
+/* ANA İÇERİK */
+.main { flex: 1; padding: 26px 36px; width: 100%; }
+
+.bolum-baslik {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--renk-ana);
+  margin-bottom: 16px;
+}
+
+/* BUTONLAR */
+.buton {
+  display: inline-block;
+  background: var(--renk-ana);
+  color: #fff;
+  border: none;
+  padding: 9px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: var(--kose);
+  cursor: pointer;
+  text-decoration: none;
+}
+.buton:hover { background: var(--renk-ana-koyu); }
+.buton-ikinci { background: #f3eef0; color: #333; border: 1px solid #ccc; }
+.buton-ikinci:hover { background: #e8e0e3; }
+.buton-sil { background: var(--renk-hata); }
+.buton-sil:hover { background: #a31f1f; }
+
+/* ETKİNLİK KARTLARI */
+.event-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px; }
+.event-card {
+  border: 1px solid #ebdbe2;
+  border-top: 3px solid var(--renk-ana);
+  border-radius: var(--kose);
+  padding: 16px 20px;
+  background: #fff;
+}
+.card-title { font-size: 1.05rem; font-weight: 700; color: var(--renk-ana); margin-bottom: 3px; }
+.card-category { font-size: 0.85rem; color: var(--renk-ana); font-style: italic; font-weight: 600; margin-bottom: 6px; }
+.event-card p { font-size: 0.86rem; color: #333; margin-bottom: 3px; }
+.card-desc { color: #555 !important; margin: 6px 0 8px; }
+.card-link { color: var(--renk-ana); font-weight: 700; font-size: 0.86rem; text-decoration: none; }
+.card-link:hover { text-decoration: underline; }
+.empty-msg { text-align: center; color: #777; padding: 30px 0; }
+
+/* FİLTRE */
+.filter-area {
+  margin-bottom: 18px;
+  background: #fdf9fb;
+  padding: 14px 18px;
+  border: 1px solid #ebdbe2;
+  border-radius: var(--kose);
+}
+.filter-group { margin-bottom: 10px; }
+.filter-group label { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 4px; }
+.filter-group input, .filter-group select {
+  width: 100%; max-width: 500px; padding: 8px 10px;
+  border: 1px solid #ccc; border-radius: 4px; font-size: 0.85rem;
+}
+.filter-count { font-size: 0.8rem; color: var(--renk-ana); font-style: italic; font-weight: 600; }
+
+/* DETAY */
+.detail-page { max-width: 800px; }
+.poster-box {
+  background: #290815; color: #fff; padding: 36px 20px; text-align: center;
+  border-radius: var(--kose); border: 2px solid var(--renk-ana);
+}
+.poster-box h2 { font-size: 1.3rem; margin-bottom: 6px; color: #fff; }
+.poster-box p { font-size: 0.85rem; color: #f7d6e2; }
+.poster-caption { display: block; font-size: 0.72rem; color: #888; margin: 5px 0 16px; }
+.info-box { border: 1px solid #ebdbe2; border-radius: var(--kose); padding: 16px 18px; margin-bottom: 16px; background: #fdf9fb; }
+.info-box h3 { font-size: 0.95rem; color: var(--renk-ana); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid #ebdbe2; }
+.info-box dt { font-size: 0.8rem; font-weight: 700; margin-top: 8px; }
+.info-box dd { font-size: 0.86rem; color: #555; }
+.desc-box { margin-bottom: 18px; }
+.desc-box h3 { font-size: 0.95rem; color: var(--renk-ana); margin-bottom: 6px; }
+.desc-box p { font-size: 0.86rem; color: #555; }
+.detail-actions { display: flex; gap: 12px; }
+
+/* FORMLAR */
+.form-info { font-size: 0.82rem; color: #777; margin-bottom: 14px; }
+.event-form { display: flex; flex-direction: column; gap: 14px; max-width: 600px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-size: 0.82rem; font-weight: 700; margin-bottom: 5px; }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 9px 12px; border: 1px solid #ccc; border-radius: 4px;
+  font-size: 0.85rem; font-family: inherit;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: var(--renk-ana);
+}
+.form-group [aria-invalid="true"] { border-color: var(--renk-hata); background: #fff5f5; }
+.hata-metni { color: var(--renk-hata); font-size: 0.75rem; margin-top: 3px; }
+.event-form .buton { align-self: flex-start; }
+
+.mesaj { padding: 10px 14px; border-radius: 4px; font-size: 0.85rem; margin-bottom: 14px; max-width: 600px; }
+.mesaj-basari { background: #fbf0f4; border: 1px solid #e8aebb; color: var(--renk-ana); font-weight: 700; }
+
+.alt-linkler { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.85rem; margin-top: 8px; }
+.alt-linkler a { color: var(--renk-ana); }
+
+/* YÖNETİM TABLOSU (Adım 13) */
+.tablo { width: 100%; border-collapse: collapse; margin-top: 16px; }
+.tablo th { background: var(--renk-ana); color: #fff; text-align: left; padding: 10px 12px; font-size: 0.85rem; }
+.tablo td { padding: 10px 12px; border-bottom: 1px solid #ebdbe2; font-size: 0.86rem; }
+.islemler { display: flex; gap: var(--bosluk-s); }
+
+/* FOOTER */
+.site-footer {
+  text-align: center; padding: 20px 36px; font-size: 0.75rem; color: #888;
+  border-top: 1px solid #ebdbe2; margin-top: auto;
+}
+
+/* MOBİL: tablo satırı kart olur */
+@media (max-width: 699px) {
+  .site-header, .site-nav, .main, .site-footer { padding-left: 16px; padding-right: 16px; }
+  .tablo thead { display: none; }
+  .tablo tr {
+    display: block;
+    border: 1px solid #ebdbe2;
+    border-radius: var(--kose);
+    margin-bottom: 12px;
+    padding: 8px;
+  }
+  .tablo td { display: block; border-bottom: none; padding: 4px 6px; }
+  .tablo td[data-baslik]::before {
+    content: attr(data-baslik) ": ";
+    font-weight: 700;
+  }
+}
