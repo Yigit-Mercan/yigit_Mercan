@@ -11,7 +11,7 @@ cp .env.example .env   # Windows: copy .env.example .env
 npm run dev
 ```
 
-Sunucu: http://localhost:3000
+Sunucu: http://localhost:3000/events · http://localhost:3000/health
 
 ## Ortam değişkenleri
 

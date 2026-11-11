@@ -5,7 +5,7 @@ Aynı repoda iki uygulama:
 | Klasör | Ne | Adres |
 |---|---|---|
 | `frontend/` | React + Vite arayüzü | http://localhost:5173 |
-| `backend/` | Node + Express REST API | http://localhost:3000 |
+| `backend/` | Node + Express REST API | http://localhost:3000/events · http://localhost:3000/health |
 
 ## Frontend
 
