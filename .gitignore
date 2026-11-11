@@ -1,24 +1,8 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+﻿# Bagimliliklar ve gizli ayarlar
+node_modules/
+.env
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Eski Sprint 1-3 statik dosyalari (repoya dahil degil)
+/css/
+/js/
+/*.html
